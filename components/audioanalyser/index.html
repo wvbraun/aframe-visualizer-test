@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>A-Frame audioanalyser Component</title>
+    <style>
+      html {
+        background: #497285;
+        color: #DFEBED;
+        font-family: monospace;
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+      h1,
+      h2 {
+        font-weight: 300;
+      }
+      h1 {
+        margin-bottom: 0;
+      }
+      h1 a {
+        color: #DFEBED;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #F78536;
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 0;
+        text-decoration: none;
+        transition: all .1s;
+      }
+      a:hover {
+        color: #2B4450;
+      }
+      #examples {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        padding-top: 5px;
+      }
+      #examples li {
+        margin-right: 30px;
+        padding: 5px 0;
+      }
+      #examples a {
+        background-size: cover;
+        display: block;
+        height: 320px;
+        width: 320px;
+      }
+      #examples h3,
+      #examples p {
+        max-width: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><i>audioanalyser</i> Component for <a href="https://aframe.io">A-Frame</a></h1>
+
+    <a class="back" href="https://ngokevin.github.io/kframe/">&larr; K-Frame</a>
+
+    <p>Audio visualizations in A-Frame using Web Audio (AnalyserNode)</p>
+
+    <h2>Examples</h2>
+
+    <ul id="examples">
+
+        <li>
+          <a href="examples/beat-detection/" style="background-color: #222; background-image: url(examples/beat-detection/preview.gif)"></a>
+          <h3>Beat Detection</h3>
+          <p>Detecting beats (i.e., kick or peaks) in audio</p>
+        </li>
+
+        <li>
+          <a href="examples/levels/" style="background-color: #222; background-image: url(examples/levels/preview.gif)"></a>
+          <h3>Levels</h3>
+          <p>Surrounded 360 degrees by audio frequency bars</p>
+        </li>
+
+        <li>
+          <a href="examples/showcase/" style="background-color: #222; background-image: url(examples/showcase/preview.gif)"></a>
+          <h3>Showcase</h3>
+          <p>Various audio visualizations combined together.</p>
+        </li>
+
+        <li>
+          <a href="examples/spotify/" style="background-color: #222; background-image: url(examples/spotify/preview.gif)"></a>
+          <h3>Spotify with Speech Recognition</h3>
+          <p>Audio visualizations with searching Spotify song previews using speech recognition</p>
+        </li>
+
+        <li>
+          <a href="examples/volume/" style="background-color: #222; background-image: url(examples/volume/preview.gif)"></a>
+          <h3>Volume</h3>
+          <p>Visualizing global average audio volume</p>
+        </li>
+
+        <li>
+          <a href="examples/waveform/" style="background-color: #222; background-image: url(examples/waveform/preview.gif)"></a>
+          <h3>Waveform</h3>
+          <p>Visualizing audio waveform (i.e., what the waves look like moving through a physical medium)</p>
+        </li>
+    </ul>
+  </body>
+</html>

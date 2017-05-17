@@ -1,0 +1,26 @@
+{
+  "name": "aframe-audioanalyser-component",
+  "version": "0.0.1",
+  "description": "Audio visualizations in A-Frame using Web Audio (AnalyserNode)",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify examples/main.js -o examples/build.js",
+    "dev": "budo examples/main.js:examples/build.js --port 8000 --live --open",
+    "dist": "webpack index.js dist/aframe-audioanalyser-component.js && webpack -p index.js dist/aframe-audioanalyser-component.min.js",
+    "lint": "semistandard -v | snazzy",
+    "prepublish": "npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvbraun/aframe-visualizer-test.git"
+  },
+  "devDependencies": {
+    "aframe-bmfont-text-component": "^0.1.4",
+    "aframe-entity-generator-component": "^3.0.1",
+    "aframe-layout-component": "^4.1.0",
+    "aframe-template-component": "^3.2.1",
+    "browserify": "^14.3.0",
+    "budo": "^10.0.3",
+    "shelljs": "^0.7.7"
+  }
+}

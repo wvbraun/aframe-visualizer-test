@@ -1,0 +1,30 @@
+{
+  "name": "aframe-visualizer-test",
+  "version": "0.0.1",
+  "description": "visualizer test",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config webpack-dev.config.js",
+    "dev": "webpack-dev-server --config webpack-dev.config.js",
+    "dist": "webpack --module-bind 'glsl=shader' index.js dist/aframe-test.js && webpack -p --module-bind 'glsl=shader' index.js dist/arame-test.min.js",
+    "generate": "node site/generate",
+    "postpublish": "npm run dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvbraun/aframe-visualizer-test.git"
+  },
+  "devDependencies": {
+    "aframe-particle-system-component": "^1.0.10",
+    "browser-sync": "^2.18.11",
+    "cheerio": "^0.22.0",
+    "glob": "^7.1.1",
+    "http-server": "^0.10.0",
+    "nunjucks": "^3.0.0",
+    "shader-loader": "^1.3.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-glsl-loader": "^1.0.1"
+  }
+}

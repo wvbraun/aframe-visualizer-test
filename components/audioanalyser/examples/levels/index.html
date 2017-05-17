@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Levels</title>
+    <meta name="description" content="Surrounded 360 degrees by audio frequency bars"></meta>
+    <meta property="og:image" content="https://raw.githubusercontent.com/ngokevin/kframe/master/components/audioanalyser/examples/levels/preview.gif"></meta>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="../build.js"></script>
+    <script src="../components/audioanalyser-levels-scale.js"></script>
+    <script src="../components/scale-y-color.js"></script>
+    <script src="../components/aframe-particle-system-component.js"></script>
+  </head>
+  <body>
+    <a-scene antialias="true">
+      <a-assets>
+        <a-mixin
+          id="bar"
+          geometry="primitive: box"
+          material="color: black"
+          scale-y-color="from: 20 10 10; to: 195 56 59; maxScale: 15"
+        ></a-mixin>
+        <audio id="song" autoplay loop src="http://localhost:8080/dist/paris.mp3"></audio>
+      </a-assets>
+      <a-entity
+        audioanalyser="src: #song; smoothingTimeConstant: 0.9"
+        audioanalyser-levels-scale="max: 50; multiplier: 0.06"
+        entity-generator="mixin: bar; num: 256"
+        layout="type: circle; radius: 10"
+        rotation="0 180 0"
+      ></a-entity>
+
+      <a-entity position="0 2.25 -15" particle-system="preset: snow; particleCount: 2000"></a-entity>
+
+      <a-light type="ambient" color="black"></a-light>
+      <a-light type="point" position="0 1 0" intensity="2"></a-light>
+      <a-circle color="#333" opacity="0.8" rotation="-90 0 0" radius="12"
+        roughness="1"></a-circle>
+      <a-sky color="#222"></a-sky>
+    </a-scene>
+  </body>
+</html>
